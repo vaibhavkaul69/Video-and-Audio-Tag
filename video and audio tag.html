@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introduction to Video tag</title>
+        <style>
+            *
+            {
+                box-sizing:border-box;
+                margin:0px;
+                padding:0px;
+            }
+            video
+            {
+                width:100%;
+                position: relative;
+            
+            
+                
+            }
+            .container
+            {
+                position: fixed;
+                width: 100%;
+            }
+            .overlay
+            {
+                position: absolute;
+                background-color: #0009;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                color:white;
+            
+            }
+            .headingText
+            {
+                position:absolute;
+                left:25%;
+                top: 35%;
+                font-size: 2rem;
+                width: 50%;
+                letter-spacing: 0.2rem;
+                line-height: 1.6;
+                border:1px solid white;
+                padding: 5px;
+                background-image:linear-gradient(to right,white,lightblue,lightgreen);
+                font-family:bakerville old face;
+                animation-name: color-changer;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                transition: ease-in-out;
+                text-align: center;
+                opacity: 0.8;
+            }
+            audio
+            {
+                filter:  rgba(0,0, 0, 0.4);
+                width: 50%;
+                border: 2px solid green;
+                border-radius: 50px;
+            }
+
+
+            @keyframes color-changer
+             {
+                0%
+                {
+                    color:black;
+                    transform: scale(1.2 );
+                }
+                25%
+                {
+                    color:green;
+                    transform: scale(1.5);
+                }
+                50%
+                {
+                    color:red;
+                    transform: scale(2);
+                }
+                75%
+                {
+                    color:magenta;
+                    transform: scale(1.5);
+                }
+                100%
+                {
+                    color:blueviolet;
+                    transform: scale(1.2);
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+
+        <video autoplay loop muted>
+            <source src="jzaa video final.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <h1 class="headingText">
+                Hey Folks this is my first demo webpage for Video tag <strong> &lt;video&gt;</strong>
+                <audio  autoplay controls loop>
+                        <source src="audio.mp3#t=00:00:55,00:01:12" type="audio/mp3" preload="auto" >
+                    </audio>
+            </h1>
+            
+        </div>
+
+    </div>
+    </body>
+    
+</html>
